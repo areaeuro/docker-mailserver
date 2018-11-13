@@ -217,6 +217,10 @@ RUN chmod +x /usr/local/bin/*
 COPY target/supervisor/supervisord.conf /etc/supervisor/supervisord.conf
 COPY target/supervisor/conf.d/* /etc/supervisor/conf.d/
 
+# JOHN Configure SPAM Sieve
+COPY target/mailseive/after.dovecot.sieve /usr/lib/dovecot/sieve-global/after.dovecot.sieve
+
+
 EXPOSE 25 587 143 465 993 110 995 4190
 
 CMD ["supervisord", "-c", "/etc/supervisor/supervisord.conf"]
