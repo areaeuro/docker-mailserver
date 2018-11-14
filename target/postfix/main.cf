@@ -11,7 +11,24 @@ alias_maps = hash:/etc/aliases
 alias_database = hash:/etc/aliases
 mydestination = $myhostname, localhost.$mydomain, localhost
 relayhost =
+# Add all the Networks That Docker Compose uses - Gets web mail working crom another container
 mynetworks = 127.0.0.0/8 [::1]/128 [fe80::]/64
+          172.16.0.0/16
+          172.17.0.0/16
+          172.18.0.0/16
+          172.19.0.0/16
+          172.20.0.0/16
+          172.21.0.0/16
+          172.22.0.0/16
+          172.23.0.0/16
+          172.24.0.0/16
+          172.25.0.0/16
+          172.26.0.0/16
+          172.27.0.0/16
+          172.28.0.0/16
+          172.29.0.0/16
+          172.30.0.0/16
+          172.31.0.0/16
 mailbox_size_limit = 0
 recipient_delimiter = +
 inet_interfaces = all
